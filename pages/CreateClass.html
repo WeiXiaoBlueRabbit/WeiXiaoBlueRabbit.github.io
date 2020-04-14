@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/my-bootstrap-nav.css" rel="stylesheet">
+	<!--自制左侧菜单栏源文件引入-->
+	<link rel="stylesheet" type="text/css" href="css/nav.css">
+	<link rel="stylesheet" type="text/css" href="fonts/iconfont.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/nav.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="css/starter-template.css" rel="stylesheet">
+	<!--
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    -->
+	
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <meta name="generator" content="Hexo 4.2.0"></head>
+  </html>
+  
+  <body>
+  
+    <main class="main">
+      <article class="post">
+	
+  <body>
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+		  <!--
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+		  -->
+          <div class="navbar-brand" id="normal"><span class="pos"><img src="images/mini.png"></span></div>>
+		  
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">待加入</a></li>
+            <li><a href="#about">待加入</a></li>
+            <li><a href="#contact">待加入</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div><!--navbar-->
+
+	<div class="hole-div">   <!--除导航栏外，把整个内容包裹在里面-->
+	<div class="my-nav">
+
+	  <ul>
+		<li class="nav-item">
+		  <a href="#"><span class="my-icon icon_1"></span><span class="tile-text">网站配置</span><i class="my-icon nav-more"></i></a>
+		  <ul>
+			<li><a href="#"><span>网站设置</span></a></li>
+			<li><a href="#"><span>友情链接</span></a></li>
+			<li><a href="#"><span>分类管理</span></a></li>
+			<li><a href="#"><span>系统日志</span></a></li>
+		  </ul>
+		</li>
+		<li class="nav-item">
+		  <a href="#"><span class="my-icon icon_2"></span><span class="tile-text">文章</span><i class="my-icon nav-more"></i></a>
+		  <ul>
+			<li><a href="#"><span>站内新闻</span></a></li>
+			<li><a href="#"><span>站内公告</span></a></li>
+			<li><a href="#"><span>登录日志</span></a></li>
+		  </ul>
+		</li>
+		<!--
+		<li class="nav-item">
+		  <a href="#"><span class="my-icon icon_3"></span><span class="tile-text">订单管理</span><i class="my-icon nav-more"></i></a>
+		  <ul>
+			<li><a href="#"><span>订单列表</span></a></li>
+			<li><a href="#"><span>打个酱油</span></a></li>
+			<li><a href="#"><span>也打酱油</span></a></li>
+		  </ul>
+		</li>
+		-->
+	  </ul>
+	</div>
+	
+	<div class="free-area">, <!--点击此区域可收起菜单栏-->
+    <div class="container">
+
+      <div class="blog-header">
+			<h1 class="blog-title">Create Class</h1>
+			<p class="lead blog-description">The official example template of creating a blog with Bootstrap.</p>
+			<span class="post-time">2020-04-13</span>
+      </div>
+
+      <div class="row">
+
+        <div class="col-sm-11 blog-main">
+
+            <div class="post-content">
+				<h3 id="Minecraft-1-12-modding-with-forge-–-2-–-main-mod-class"><a href="#Minecraft-1-12-modding-with-forge-–-2-–-main-mod-class" class="headerlink" title="Minecraft 1.12 modding with forge – 2 – main mod class"></a>Minecraft 1.12 modding with forge – 2 – main mod class</h3><p>Hello everyone and welcome to part 2 of <em>Minecraft 1.12 modding with forge</em>, today we are going to setup the main mod class and make minecraft load our mod. So start eclipse and start modding!</p>
+<hr>
+<p>First we are going to setup some folders to structure the mod.</p>
+<ol>
+<li>Right-mouse click on the <strong>root</strong> folder in eclipse, press new and select <em>source folder</em>. Then as folder name use:* “src/main/java”*.<img src="http://suppergerrie2.com/wp-content/uploads/2017/07/EclipseStart-1.png" width=100% height=100% alt="过程" align=center></li>
+<li>Do step 1 again but instead use <em>“src/main/resources”</em>  as folder name.</li>
+<li>Create a package in the <em>“src/main/java”</em>  source folder. I will call it <em>“com.suppergerrie2.tutorial”</em>. But you should think of your own name, I will be referring to this package as the  <strong>mod package</strong>.  This package will contain all of the classes we are going to create.</li>
+<li>Create a class in the <strong>mod package</strong> and I will call it <em>TutorialMod</em>  I will be referring to this class as the <strong>Main</strong> class. This class will be the entry point of the mod. Everything will start here.</li>
+<li>One last class before we can start coding, I will call it <em>Reference</em>. This class is going to contain all of the references to constant values. For example the mod version, modname, etc.</li>
+</ol>
+<hr>
+<p>The basic files are now setup so lets start coding!<br>In the <em><strong>reference</strong></em> class add 4 static final String variables:</p>
+<ul>
+<li>MODID, this will be the id of your mod, it can be whatever you want but don’t make it too fancy, it also has to be all lowercase.</li>
+</ul>
+<ul>
+<li>MODNAME, this will be the name of your mod, this will be shown to the users of your mod. This can be as fancy as you want.</li>
+<li>VERSION, the version of your mod. You could think of your own versioning system or use a standard one, I am just gonna use  <em>1.0</em></li>
+<li>ACCEPTED_MINECRAFT_VERSIONS, the versions of minecraft your mod is supposed to work with. This is in <a href="http://maven.apache.org/components/enforcer/enforcer-rules/versionRanges.html" target="_blank" rel="noopener">maven syntax</a> I will use <em>[1.12]</em>.<br>Your reference class should now look a little like this:  </li>
+</ul>
+<p><sub><a href="https://gist.github.com/suppergerrie2/98e6d46fa3ac10fe07d2508159154994#file-reference-java" target="_blank" rel="noopener">Reference.java</a> </sub></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Reference</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String MODID = <span class="string">"stm"</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String MODNAME = <span class="string">"Suppergerrie2's Tutorial Mod"</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String VERSION = <span class="string">"1.0"</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String ACCEPTED_MINECRAFT_VERSIONS = <span class="string">"[1.12]"</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>In the <em><strong>Main</strong></em> class add an <em>@Mod</em> annotation above the class declaration. This will tell forge that this is a mod file. In eclipse you can press <em>ctrl-shift-o</em> to import missing imports, press it to import <em>net.minecraftforge.fml.common.Mod</em>. _@Mod_requires the modid as an attribute, so lets add it. I will also add the name, version and accepted minecraft. It should now look like this:</p>
+<p><sub><a href="https://gist.github.com/suppergerrie2/063f1e5861c62b10f7b73b4d97867bf6#file-tutorialmod-java" target="_blank" rel="noopener">TutorialMod.java</a></sub></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Mod</span>(modid=Reference.MODID, name=Reference.MODNAME, version=Reference.VERSION, acceptedMinecraftVersions=Reference.ACCEPTED_MINECRAFT_VERSIONS)</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TutorialMod</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Now lets add some functions, these 3 functions will be called by forge in specific loading stages. We have <em>preInit</em>, <em>init</em> and <em>postInit</em>. They all need an <em>@EventHandler_annotation</em>. They all need a specific argument. preInit has <em>FMLPreInitializationEvent</em>, init has <em>FMLInitializationEvent</em>, and postInit has <em>FMLPostInitializationEvent</em>. I will also add some <em>println</em> functions for debugging.<br>This is what it should look like:</p>
+<p><sub><a href="https://gist.github.com/suppergerrie2/6c721476ecb54b56c45d452245d482b6#file-tutorialmod-java" target="_blank" rel="noopener">TutorialMod.java</a></sub></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Mod</span>(modid = Reference.MODID, name=Reference.MODNAME, version=Reference.VERSION, acceptedMinecraftVersions=Reference.ACCEPTED_MINECRAFT_VERSIONS)</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TutorialMod</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">	<span class="meta">@EventHandler</span></span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">preInit</span><span class="params">(FMLPreInitializationEvent event)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		System.out.println(Reference.MODID + <span class="string">":preInit"</span>);</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">	<span class="meta">@EventHandler</span></span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">(FMLInitializationEvent event)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		System.out.println(Reference.MODID + <span class="string">":init"</span>);</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">	<span class="meta">@EventHandler</span></span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">postInit</span><span class="params">(FMLPostInitializationEvent event)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		System.out.println(Reference.MODID + <span class="string">":postInit"</span>);</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>This is enough for forge to load the mod, to run the game press the green run button. If this doesn’t work go to <em>Run Configurations</em>  click on the client and run.</p>
+<p><img src="http://suppergerrie2.com/wp-content/uploads/2017/07/EclipseRunConf.png" alt="过程"></p>
+<p>If everything is good the game will start and load the mod. If you added the  <em>println</em>  function calls you can look in the console and they should be in there. You can also click on <em>Mods</em>  and see if your mod is in there. If you click on your mod it will show a red warning telling you to add a file, don’t worry. We will add that now!<br><img src="http://suppergerrie2.com/wp-content/uploads/2017/07/MinecraftModLoaded.png" alt="效果"></p>
+<p>Going back to eclipse, go to the _src/main/resources_source folder and create an empty text file. Add this to the file and replace the words in capslock:</p>
+<p><sub><a href="https://gist.github.com/suppergerrie2/bf25c9b5bc73d56e63f7dcd186eaeaee#file-mcmod-info" target="_blank" rel="noopener">mcmod.info</a></sub></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">  &quot;modid&quot;: &quot;MODID&quot;,</span><br><span class="line"></span><br><span class="line">  &quot;name&quot;: &quot;MODNAME&quot;,</span><br><span class="line"></span><br><span class="line">  &quot;description&quot;: &quot;DESCRIPTION&quot;,</span><br><span class="line"></span><br><span class="line">  &quot;version&quot;: &quot;VERSION&quot;,</span><br><span class="line"></span><br><span class="line">  &quot;mcversion&quot;: &quot;$&#123;mcversion&#125;&quot;,</span><br><span class="line"></span><br><span class="line">  &quot;url&quot;: &quot;&quot;,</span><br><span class="line"></span><br><span class="line">  &quot;updateUrl&quot;: &quot;&quot;,</span><br><span class="line"></span><br><span class="line">  &quot;authorList&quot;: [&quot;YOUR NAME&quot;],</span><br><span class="line"></span><br><span class="line">  &quot;credits&quot;: &quot;Suppergerrie2&#39;s tutorial and the internet!&quot;,</span><br><span class="line"></span><br><span class="line">  &quot;logoFile&quot;: &quot;&quot;,</span><br><span class="line"></span><br><span class="line">  &quot;screenshots&quot;: [],</span><br><span class="line"></span><br><span class="line">  &quot;dependencies&quot;: []</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<p>After relaunching the game the issue should be fixed.</p>
+<p>One last thing before I will finish this part of the tutorial,<br>In the <em><strong>Main</strong></em>  class add these 2 lines:</p>
+<p><sub><a href="https://gist.github.com/suppergerrie2/ce5370d79e0cc43f53ca04a6db1ffb08#file-tutorialmod-java" target="_blank" rel="noopener">TutorialMod.java</a></sub></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Instance</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> TutorialMod instance;</span><br></pre></td></tr></table></figure>
+
+<p>Forge will assign the instance of your <strong>Main</strong> class it is using to this variable.</p>
+<p>Next time we will add an custom item, I hope to see you next time!<br>I also made a  <a href="https://github.com/suppergerrie2/ForgeTutorial" target="_blank" rel="noopener">github repository</a>  for this tutorial, by clicking  <a href="https://github.com/suppergerrie2/ForgeTutorial/tree/master/per%20part/part%202" target="_blank" rel="noopener">here</a> you will be send to the code of this part, it is my first time really using github so sorry for all of the errors I probably made!</p>
+
+			</div>
+			
+			</div>
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+	</div>
+	
+ </body>
+</article>
+    </main>
+	</div>
+	
+	<div class="free-area">
+	<div class="blog-footer">
+		<p>by <a href="">蓝兔</a> </p>
+	</div>
+	</div>
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

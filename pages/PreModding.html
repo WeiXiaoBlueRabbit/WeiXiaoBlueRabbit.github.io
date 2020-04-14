@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/my-bootstrap-nav.css" rel="stylesheet">
+	<!--自制左侧菜单栏源文件引入-->
+	<link rel="stylesheet" type="text/css" href="css/nav.css">
+	<link rel="stylesheet" type="text/css" href="fonts/iconfont.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/nav.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="css/starter-template.css" rel="stylesheet">
+	<!--
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    -->
+	
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <meta name="generator" content="Hexo 4.2.0"></head>
+  </html>
+  
+  <body>
+  
+    <main class="main">
+      <article class="post">
+	
+  <body>
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+		  <!--
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+		  -->
+          <div class="navbar-brand" id="normal"><span class="pos"><img src="images/mini.png"></span></div>>
+		  
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">待加入</a></li>
+            <li><a href="#about">待加入</a></li>
+            <li><a href="#contact">待加入</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div><!--navbar-->
+
+	<div class="hole-div">   <!--除导航栏外，把整个内容包裹在里面-->
+	<div class="my-nav">
+
+	  <ul>
+		<li class="nav-item">
+		  <a href="#"><span class="my-icon icon_1"></span><span class="tile-text">网站配置</span><i class="my-icon nav-more"></i></a>
+		  <ul>
+			<li><a href="#"><span>网站设置</span></a></li>
+			<li><a href="#"><span>友情链接</span></a></li>
+			<li><a href="#"><span>分类管理</span></a></li>
+			<li><a href="#"><span>系统日志</span></a></li>
+		  </ul>
+		</li>
+		<li class="nav-item">
+		  <a href="#"><span class="my-icon icon_2"></span><span class="tile-text">文章</span><i class="my-icon nav-more"></i></a>
+		  <ul>
+			<li><a href="#"><span>站内新闻</span></a></li>
+			<li><a href="#"><span>站内公告</span></a></li>
+			<li><a href="#"><span>登录日志</span></a></li>
+		  </ul>
+		</li>
+		<!--
+		<li class="nav-item">
+		  <a href="#"><span class="my-icon icon_3"></span><span class="tile-text">订单管理</span><i class="my-icon nav-more"></i></a>
+		  <ul>
+			<li><a href="#"><span>订单列表</span></a></li>
+			<li><a href="#"><span>打个酱油</span></a></li>
+			<li><a href="#"><span>也打酱油</span></a></li>
+		  </ul>
+		</li>
+		-->
+	  </ul>
+	</div>
+	
+	<div class="free-area">, <!--点击此区域可收起菜单栏-->
+    <div class="container">
+
+      <div class="blog-header">
+			<h1 class="blog-title">Pre Modding</h1>
+			<p class="lead blog-description">The official example template of creating a blog with Bootstrap.</p>
+			<span class="post-time">2020-04-13</span>
+      </div>
+
+      <div class="row">
+
+        <div class="col-sm-11 blog-main">
+
+            <div class="post-content">
+				<h3 id="Minecraft-1-12-modding-with-forge-–-1-–-getting-started"><a href="#Minecraft-1-12-modding-with-forge-–-1-–-getting-started" class="headerlink" title="Minecraft 1.12 modding with forge – 1 – getting started"></a>Minecraft 1.12 modding with forge – 1 – getting started</h3><p>Hello everyone,</p>
+<p>I have been messing around with modding minecraft for the last few days and noticed the lack of tutorials for 1.12. So I thought why not write a tutorial myself. Warning: the way I structured my code and the way I wrote the code may not be the ideal way!</p>
+<p>Before I get started:<br>You should have an IDE installed. I will be using <a href="https://eclipse.org/home/index.php" target="_blank" rel="noopener">eclipse</a>, but it is also possible to use IntelliJ. I will not be teaching java so you should do a java tutorial first if you don’t have any experience. Also I am using windows 10 and I have no idea how to do it on an other OS. Sorry D: (But it shouldn’t be so different I think). I am planning on releasing a part of this tutorial every <em>friday 18:00 pm GMT+2.</em></p>
+<p>Well lets get started!</p>
+<ol>
+<li>First you should download the latest version of forge (This tutorial will be for minecraft 1.12), I will be using <em>forge-1.12-14.21.1.2387</em>.<br>Go to the <a href="http://files.minecraftforge.net/" target="_blank" rel="noopener">forge</a> download site and download the mdk (Mod Development Kit).</li>
+<li>Extract the downloaded file to an empty folder. You should see a lot of files:<br><img src="https://suppergerrie2.com/wp-content/uploads/2017/07/Schermopname-8.png" alt="MDK文件目录"></li>
+</ol>
+<p>You don’t need all of these files to get started.<br>You only need:</p>
+<ul>
+<li>build.gradle</li>
+<li>gradlew.bat</li>
+<li>the gradle folder</li>
+<li>The gradlew file (Not showed in picture because I forgot to add this when first making the tutorial)</li>
+<li>The .gitignore file (Will be helpful in the future, this is not showed in the picture because I forgot this when making the tutorial. Sorry!)</li>
+</ul>
+<ol start="3">
+<li><p>Copy these files in a new folder. I called my folder: “ForgeTutorial”. I will be referring to this folder as the <strong>root</strong> folder.<br><img src="https://suppergerrie2.com/wp-content/uploads/2017/07/Schermopname-8-1.png" alt="新建文件目录"></p>
+</li>
+<li><p>While in the  <strong>root</strong> folder make sure you have no files selected and while holding the shift button right click in the folder. A menu should come up and there should be an option “open command window here”or “open powershell window here”. Click on it and a command window or powershell window. Type: “.\gradlew setupDecompWorkspace” without the quotes and press enter. It will probably not skip as much as in the image but you should get “BUILD SUCCESSFUL”.<br><img src="https://suppergerrie2.com/wp-content/uploads/2017/07/setupDecompWorkspacePowershellImg.png" alt="命令运行结果"></p>
+</li>
+<li><p>If you are not using eclipse this step will be different for you, but if you are using eclipse follow this step. You have to execute one more command, type “.\gradlew eclipse” and press enter. Again it will probably skip less for you but you should get “BUILD SUCCESSFUL”.<br><img src="https://suppergerrie2.com/wp-content/uploads/2017/07/gradlewEclipsePowershellImg.png" alt="运行结果"></p>
+</li>
+<li><p>Now open eclipse and select a folder you want your workspace to be in. Press <em>File→Import</em> . This will open a prompt select <em>General→Existing Projects into Workspace</em> and click <em>next</em>. Make sure you have <em>“select root directory”</em> selected and click browse. Browse to your <strong>root</strong> folder and select it. Eclipse will see it as an project and not give any errors. Now click <em>Finish</em>.<br><img src="https://suppergerrie2.com/wp-content/uploads/2017/07/eclipseImportProject-1.png" alt="过程"></p>
+</li>
+<li><p>Now you are ready to start modding!</p>
+</li>
+</ol>
+<p>You probably also want to setup a git repository so you can share your code and people can help you. If you know how to do this you can just skip to the next part.</p>
+<p>I’ll explain how to put the repository on github, there are other websites where you can put it but I am familiar with github.<br>To create a repository and upload your code follow the following steps:</p>
+<ol>
+<li>Create an account at <a href="https://github.com/" target="_blank" rel="noopener">github.com</a></li>
+<li>Create a repositry by clicking the <a href="https://github.com/new" target="_blank" rel="noopener">plus button</a> at the top right.</li>
+<li>Copy the url it gives you, the url should be in the following format: <a href="https://github.com/USERNAME/REPONAME.git" target="_blank" rel="noopener">https://github.com/USERNAME/REPONAME.git</a></li>
+<li>Download <a href="https://git-scm.com/" target="_blank" rel="noopener">git</a> and install it</li>
+<li>Open a powershell/command prompt/terminal. If you are on windows you can hold shift and right click in the root folder. On other operating systems you may need to use the “cd” command to change your directory to the root folder</li>
+<li>run:<ul>
+<li><em>git init</em>     This will initialize the git repository</li>
+<li>git remote add origin URL FROM STEP 3       This will tell git where to upload the code</li>
+<li><em>git add</em> .     This will add all of the files in the current repository to your git repo. Make sure you add the “.” !</li>
+<li><em>git commit -m “My first commit!”</em>    This will tell git to remember the state of all your files at this point in time</li>
+<li><em>git push origin master</em>    This will upload your code to the repository you made earlier!</li>
+</ul>
+</li>
+</ol>
+<ol start="7">
+<li>Now when you made changes you only need to run:<ul>
+<li>git add .</li>
+<li>git commit -m “Message explaining changes”</li>
+<li>git push origin master</li>
+</ul>
+</li>
+</ol>
+<p>I hope that was easy to follow! If you have any question don’t hesitate to ask in the comments! Also if you saw any errors in the tutorial please let me know so I can fix it!<br>Next time we will start setting up the MainMod file.</p>
+
+			</div>
+			
+			</div>
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+	</div>
+	
+ </body>
+</article>
+    </main>
+	</div>
+	
+	<div class="free-area">
+	<div class="blog-footer">
+		<p>by <a href="">蓝兔</a> </p>
+	</div>
+	</div>
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

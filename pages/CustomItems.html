@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/my-bootstrap-nav.css" rel="stylesheet">
+	<!--自制左侧菜单栏源文件引入-->
+	<link rel="stylesheet" type="text/css" href="css/nav.css">
+	<link rel="stylesheet" type="text/css" href="fonts/iconfont.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/nav.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="css/starter-template.css" rel="stylesheet">
+	<!--
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    -->
+	
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <meta name="generator" content="Hexo 4.2.0"></head>
+  </html>
+  
+  <body>
+  
+    <main class="main">
+      <article class="post">
+	
+  <body>
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+		  <!--
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+		  -->
+          <div class="navbar-brand" id="normal"><span class="pos"><img src="images/mini.png"></span></div>>
+		  
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">待加入</a></li>
+            <li><a href="#about">待加入</a></li>
+            <li><a href="#contact">待加入</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div><!--navbar-->
+
+	<div class="hole-div">   <!--除导航栏外，把整个内容包裹在里面-->
+	<div class="my-nav">
+
+	  <ul>
+		<li class="nav-item">
+		  <a href="#"><span class="my-icon icon_1"></span><span class="tile-text">网站配置</span><i class="my-icon nav-more"></i></a>
+		  <ul>
+			<li><a href="#"><span>网站设置</span></a></li>
+			<li><a href="#"><span>友情链接</span></a></li>
+			<li><a href="#"><span>分类管理</span></a></li>
+			<li><a href="#"><span>系统日志</span></a></li>
+		  </ul>
+		</li>
+		<li class="nav-item">
+		  <a href="#"><span class="my-icon icon_2"></span><span class="tile-text">文章</span><i class="my-icon nav-more"></i></a>
+		  <ul>
+			<li><a href="#"><span>站内新闻</span></a></li>
+			<li><a href="#"><span>站内公告</span></a></li>
+			<li><a href="#"><span>登录日志</span></a></li>
+		  </ul>
+		</li>
+		<!--
+		<li class="nav-item">
+		  <a href="#"><span class="my-icon icon_3"></span><span class="tile-text">订单管理</span><i class="my-icon nav-more"></i></a>
+		  <ul>
+			<li><a href="#"><span>订单列表</span></a></li>
+			<li><a href="#"><span>打个酱油</span></a></li>
+			<li><a href="#"><span>也打酱油</span></a></li>
+		  </ul>
+		</li>
+		-->
+	  </ul>
+	</div>
+	
+	<div class="free-area">, <!--点击此区域可收起菜单栏-->
+    <div class="container">
+
+      <div class="blog-header">
+			<h1 class="blog-title">Custom Item</h1>
+			<p class="lead blog-description">The official example template of creating a blog with Bootstrap.</p>
+			<span class="post-time">2020-04-13</span>
+      </div>
+
+      <div class="row">
+
+        <div class="col-sm-11 blog-main">
+
+            <div class="post-content">
+				<h3 id="Minecraft-1-12-modding-with-forge-–-3-–-custom-item"><a href="#Minecraft-1-12-modding-with-forge-–-3-–-custom-item" class="headerlink" title="Minecraft 1.12 modding with forge – 3 – custom item"></a>Minecraft 1.12 modding with forge – 3 – custom item</h3><p>Hello everyone,</p>
+<p>Today we are going to make a custom item, I am going to show you how to register your items, register item models, and work with <strong>RegistryEvents</strong>.</p>
+<hr>
+<p>First we are going to create some packages and files.</p>
+<ol>
+<li>Create a package in your <strong>mod package</strong> and call it items. This package will contain all of the custom item classes.</li>
+<li>Create another package inside the <strong>mod package</strong> and call it init. In this package we will put all of our item, block etc. initialization classes.</li>
+<li>Inside the items package create a class ItemBasic.</li>
+<li>Inside the init package create a class ModItems.</li>
+</ol>
+<hr>
+<p>Your package structure should now look a little like this:<br><img src="https://suppergerrie2.com/wp-content/uploads/2017/07/eclipseFolderStructure.png" alt="目录"></p>
+<p>The <em>ItemBasic</em> class should extend Item (When importing make sure to import “<em>net.minecraft.item.Item<em>”). Now add a constructor with a String name. Inside of the constructor call the methods: “</em>setUnlocalizedName</em> and <em>setRegistryName*” and pass them the name variable. The *setUnlocalizedName</em> method will set the unlocalizedName of the item, this will add item. in front of the name (item.name). The <em>setRegistryName</em> will set the registryName of the item. This name is used internally and should <strong>never</strong> be changed after assigning the item.</p>
+<p> <sub>ItemBasic.java</sub></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> net.minecraft.item.Item;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ItemBasic</span> <span class="keyword">extends</span> <span class="title">Item</span> </span>&#123;	</span><br><span class="line"></span><br><span class="line">      <span class="function"><span class="keyword">public</span> <span class="title">ItemBasic</span><span class="params">(String name)</span></span>&#123; </span><br><span class="line">            setUnlocalizedName(name);</span><br><span class="line">            setRegistryName(name);</span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>This class will be the most basic item possible, it won’t have any special effects.</p>
+<p>In the <em>ModItems</em> class we will be instantiating and registring our objects. In the <em>ModItems</em> class create a static variable of type <em>Item</em>, I will call it <em>tutorial_item</em> and a public static method called <em>init</em>. This method will be called in the preInit function of our <strong>Main</strong> class and initialize all of our items. It will return nothing and it doesn’t need any arguments.<br>In the <em>init</em> function initialize the <em>tutorial_item</em> variable. I will pass it the name <em>tutorial_item</em>.</p>
+<p>Now we need to let forge know we have an item to register, this is done in the <strong>RegistryEvent</strong>. Add a public static method called <em>registerItems</em> it has to have an argument of type <em>RegistryEvent.Register<Item></em>. Above the method add an annotation <em>@SubscribeEvent</em> and above the class declaration add an annotation <em>@Mod.EventBusSubscriber</em> and add an modid attribute.<br>In the <em>registerItems</em> method register your item by calling the register method like this: </p>
+<p><sub>ModItems.java</sub></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@SubscribeEvent</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">registerItems</span><span class="params">(RegistryEvent.Register&lt;Item&gt; event)</span> </span>&#123;</span><br><span class="line">   event.getRegistry().registerAll(tutorialItem);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>In the <strong>Main</strong> class’ init method call the init method of the <em>ModItems</em> class.</p>
+<p><sub>TutorialMod.java</sub></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Mod</span>(modid = Reference.MODID, name=Reference.MODNAME, version=Reference.VERSION, acceptedMinecraftVersions=Reference.ACCEPTED_MINECRAFT_VERSIONS)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TutorialMod</span> </span>&#123;		</span><br><span class="line"></span><br><span class="line">   <span class="meta">@Instance</span>	</span><br><span class="line">   <span class="keyword">public</span> <span class="keyword">static</span> TutorialMod instance;</span><br><span class="line"></span><br><span class="line">   <span class="meta">@EventHandler</span>	</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">preInit</span><span class="params">(FMLPreInitializationEvent event)</span> </span>&#123;</span><br><span class="line">      System.out.println(Reference.MODID + <span class="string">":preInit"</span>);</span><br><span class="line">      ModItems.init();</span><br><span class="line">   &#125;	</span><br><span class="line"></span><br><span class="line">   <span class="meta">@EventHandler</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">(FMLInitializationEvent event)</span> </span>&#123;	</span><br><span class="line">      System.out.println(Reference.MODID + <span class="string">":init"</span>);	</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">   <span class="meta">@EventHandler</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">postInit</span><span class="params">(FMLPostInitializationEvent event)</span> </span>&#123;</span><br><span class="line">      System.out.println(Reference.MODID + <span class="string">":postInit"</span>);</span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>.</p>
+<p><sub>ModItems.java</sub></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Mod</span>.EventBusSubscriber(modid=Reference.MODID)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ModItems</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">static</span> Item tutorialItem;</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;</span><br><span class="line">      tutorialItem = <span class="keyword">new</span> ItemBasic(<span class="string">"tutorial_item"</span>);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="meta">@SubscribeEvent</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">registerItems</span><span class="params">(RegistryEvent.Register&lt;Item&gt; event)</span> </span>&#123;</span><br><span class="line">      event.getRegistry().registerAll(tutorialItem);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>.</p>
+<p><sub>ItemBasic.java</sub></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ItemBasic</span> <span class="keyword">extends</span> <span class="title">Item</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="title">ItemBasic</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">      setUnlocalizedName(name);</span><br><span class="line">      setRegistryName(name);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>This is technically enough for forge to load the item. When you start the game, and load a world you can give yourself the item with the command: “<em>/give @p *</em>modid*<em>:itemname</em>”. When you do this you will see that it doesn’t have a model and texture yet. So lets add those right now!<br><img src="https://suppergerrie2.com/wp-content/uploads/2017/07/firstItemMCModding.png" alt="效果图_1"></p>
+<p>In the <em>ModItems</em> class we will use another event to register the model location of the item. This is done in the <strong>ModelRegistryEvent</strong>. Add a public static method called <em>registerRenders</em> with as argument <em>ModelRegistryEvent</em>. Don’t forget to add an <em>@SubscribeEvent</em> annotation above the method!</p>
+<p>Add another method, this method is also static and takes an Item as argument, I will call it <em>registerRender</em> (without an “s”!). In this method add the following line:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation( item.getRegistryName(), &quot;inventory&quot;));</span><br></pre></td></tr></table></figure>
+
+<p>This line will set the location of the item model.<br>In the <em>registerRenders</em> method call the <em>registerRender</em> method and pass it your custom item.<br>Your item will now have a location registered, we haven’t added a model and texture yet so forge will change it with a custom model telling you the location.</p>
+<p><sub>ModItems.java</sub></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@SubscribeEvent</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">registerRenders</span><span class="params">(ModelRegistryEvent event)</span> </span>&#123;</span><br><span class="line">   registerRender(tutorialItem);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">registerRender</span><span class="params">(Item item)</span> </span>&#123;</span><br><span class="line">   ModelLoader.setCustomModelResourceLocation(item, <span class="number">0</span>, <span class="keyword">new</span> ModelResourceLocation( item.getRegistryName(), <span class="string">"inventory"</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>To add a model and texture create a new package in the <em>src/main/resources</em> folder called assets.<strong>modid</strong> and ofcourse replace <strong>modid</strong> with your <strong>modid</strong>. In this package we have to create some more packages. Create: <em>models.item</em> and <em>textures.items</em> (make sure you don’t have a “s”behind item after models).<br>In the <em>textures.items</em> package you can add a texture (make sure its size is a power of 2, 16×16, 32×32, etc.). It doesn’t matter what you call it but it has to be lowercase and you have to remember the name. I will call it tutorial_item.png and I will use the texture:<img src="http://suppergerrie2.com/wp-content/uploads/2017/07/tutorialitem-1.png" alt="物品材质1"><br>In the models.item package create a new text file. In the text file add the following json code:</p>
+<p><sub>tutorialitem.json</sub></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    <span class="attr">"parent"</span>: <span class="string">"item/generated"</span>,</span><br><span class="line"></span><br><span class="line">    <span class="attr">"textures"</span>: &#123;</span><br><span class="line"></span><br><span class="line">        <span class="attr">"layer0"</span>: <span class="string">"MODID:items/TEXTURENAME"</span></span><br><span class="line"></span><br><span class="line">     &#125;,</span><br><span class="line"></span><br><span class="line">     </span><br><span class="line"></span><br><span class="line">    <span class="attr">"display"</span>: &#123;</span><br><span class="line"></span><br><span class="line">        <span class="attr">"thirdperson"</span>: &#123;</span><br><span class="line"></span><br><span class="line">            <span class="attr">"rotation"</span>: [<span class="number">-90</span>,<span class="number">0</span>,<span class="number">0</span>],</span><br><span class="line"></span><br><span class="line">            <span class="attr">"translation"</span>: [<span class="number">0</span>,<span class="number">1</span>,<span class="number">-3</span>],</span><br><span class="line"></span><br><span class="line">            <span class="attr">"scale"</span>: [<span class="number">0.55</span>,<span class="number">0.55</span>,<span class="number">0.55</span>]</span><br><span class="line"></span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">        <span class="attr">"firstperson"</span>: &#123;</span><br><span class="line"></span><br><span class="line">            <span class="attr">"rotation"</span>: [<span class="number">0</span>,<span class="number">-135</span>,<span class="number">25</span>],</span><br><span class="line"></span><br><span class="line">            <span class="attr">"translation"</span>: [<span class="number">0</span>,<span class="number">4</span>,<span class="number">2</span>],</span><br><span class="line"></span><br><span class="line">            <span class="attr">"scale"</span>: [<span class="number">1.7</span>,<span class="number">1.7</span>,<span class="number">1.7</span>]</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Save it under the same name as your item but make sure it is all lowercase or it won’t work, also remember to save it as NAME.<strong>json</strong>. You have to replace the words in capslock with the corresponding values. The texture name <strong>shouldn’t</strong> contain the extension (.png).<br>You may have noticed that the name isn’t displaying correct. That is because we haven’t added a lang file yet, so lets do that. In the assets.<strong>modid</strong> package create a new package called lang, in this package create a new text file. In this text file add the following line:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">item.ITEMNAME.name&#x3D;YOUR NAME</span><br></pre></td></tr></table></figure>
+
+<p>And again, replace the words in caps with your own values. Save this file in the <em>lang</em> package and call it <em>en_us.lang</em>.<br>One last thing before we can launch the game and admire our new item, in the <em>src/main/resources</em> folder create a new textfile, give it the following contents and save it as pack.mcmeta:</p>
+<p><sub>pack.mcmeta</sub></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    &quot;pack&quot;: &#123;</span><br><span class="line"></span><br><span class="line">        &quot;description&quot;: &quot;tutorialMod resources&quot;,</span><br><span class="line"></span><br><span class="line">        &quot;pack_format&quot;: 3</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>This will make sure forge uses version 3 of the pack versions. (This is recommended for 1.12)</p>
+<p>Now you can start the game and you should have an item with texture and name!<br><img src="https://suppergerrie2.com/wp-content/uploads/2017/07/2017-07-20_11.43.13.png" alt="效果图_2"><br>It would probably be smart to add it to a creative tab, in the <em>ModItems</em> class’ <em>init</em> method you can change some simple things about the item.<br>Because of the way forge is made you can chain method calls after eachother. Call the method <em>setCreativeTab</em> on the item, I will put it in the <em>miscellaneous</em> creative tab. So I will pass the method <em>CreativeTabs.MISC</em>. Just to show you how to chain methods I make it stack to 32. I will do this by calling <em>setMaxStackSize</em>. This is the line I have now:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tutorialItem &#x3D; new ItemBasic(&quot;tutorial_item&quot;).setCreativeTab(CreativeTabs.MISC).setMaxStackSize(32);</span><br></pre></td></tr></table></figure>
+
+<p>Well that was it for this part! In the next part we will add a custom block. By clicking <a href="https://github.com/suppergerrie2/ForgeTutorial/tree/master/per%20part/part%203" target="_blank" rel="noopener">here</a> you will be send to the code of this part.</p>
+
+			</div>
+			
+			</div>
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+	</div>
+	
+ </body>
+</article>
+    </main>
+	</div>
+	
+	<div class="free-area">
+	<div class="blog-footer">
+		<p>by <a href="">蓝兔</a> </p>
+	</div>
+	</div>
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

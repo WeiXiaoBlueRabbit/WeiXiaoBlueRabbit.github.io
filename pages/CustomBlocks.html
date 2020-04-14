@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+  <html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/my-bootstrap-nav.css" rel="stylesheet">
+	<!--自制左侧菜单栏源文件引入-->
+	<link rel="stylesheet" type="text/css" href="css/nav.css">
+	<link rel="stylesheet" type="text/css" href="fonts/iconfont.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/nav.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="css/starter-template.css" rel="stylesheet">
+	<!--
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    -->
+	
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <meta name="generator" content="Hexo 4.2.0"></head>
+  </html>
+  
+  <body>
+  
+    <main class="main">
+      <article class="post">
+	
+  <body>
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+		  <!--
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+		  -->
+          <div class="navbar-brand" id="normal"><span class="pos"><img src="images/mini.png"></span></div>>
+		  
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">待加入</a></li>
+            <li><a href="#about">待加入</a></li>
+            <li><a href="#contact">待加入</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div><!--navbar-->
+
+	<div class="hole-div">   <!--除导航栏外，把整个内容包裹在里面-->
+	<div class="my-nav">
+
+	  <ul>
+		<li class="nav-item">
+		  <a href="#"><span class="my-icon icon_1"></span><span class="tile-text">网站配置</span><i class="my-icon nav-more"></i></a>
+		  <ul>
+			<li><a href="#"><span>网站设置</span></a></li>
+			<li><a href="#"><span>友情链接</span></a></li>
+			<li><a href="#"><span>分类管理</span></a></li>
+			<li><a href="#"><span>系统日志</span></a></li>
+		  </ul>
+		</li>
+		<li class="nav-item">
+		  <a href="#"><span class="my-icon icon_2"></span><span class="tile-text">文章</span><i class="my-icon nav-more"></i></a>
+		  <ul>
+			<li><a href="#"><span>站内新闻</span></a></li>
+			<li><a href="#"><span>站内公告</span></a></li>
+			<li><a href="#"><span>登录日志</span></a></li>
+		  </ul>
+		</li>
+		<!--
+		<li class="nav-item">
+		  <a href="#"><span class="my-icon icon_3"></span><span class="tile-text">订单管理</span><i class="my-icon nav-more"></i></a>
+		  <ul>
+			<li><a href="#"><span>订单列表</span></a></li>
+			<li><a href="#"><span>打个酱油</span></a></li>
+			<li><a href="#"><span>也打酱油</span></a></li>
+		  </ul>
+		</li>
+		-->
+	  </ul>
+	</div>
+	
+	<div class="free-area">, <!--点击此区域可收起菜单栏-->
+    <div class="container">
+
+      <div class="blog-header">
+			<h1 class="blog-title">Custom Block</h1>
+			<p class="lead blog-description">The official example template of creating a blog with Bootstrap.</p>
+			<span class="post-time">2020-04-13</span>
+      </div>
+
+      <div class="row">
+
+        <div class="col-sm-11 blog-main">
+
+            <div class="post-content">
+				<h3 id="Minecraft-1-12-modding-with-forge-–-4-–-custom-block"><a href="#Minecraft-1-12-modding-with-forge-–-4-–-custom-block" class="headerlink" title="Minecraft 1.12 modding with forge – 4 – custom block"></a>Minecraft 1.12 modding with forge – 4 – custom block</h3><p>Hello everyone,</p>
+<p>Today we are going to make a custom block and an item for the block, an ItemBlock. This tutorial will only cover the most basic block, just a solid cube with a texture. In some of the next tutorials we will go more in depth in making a block.  </p>
+<hr>
+<p>Just like with the <a href="[http://suppergerrie2.com/minecraft-1-12-modding-with-forge-3-custom-item](http://suppergerrie2.com/minecraft-1-12-modding-with-forge-3-custom-item)/">item</a> we are going to create some files to keep some structure in our mod.</p>
+<ol>
+<li>Create a package in the <em><strong>mod package</strong></em> and call it <em>blocks</em>. This package will contain all of the custom block classes.  </li>
+<li>Inside the <em>blocks</em> package create a class called <em>BlockBasic</em>. This will contain all of our custom logic, for this block it won’t be much.  </li>
+<li>Inside the <em>init</em> package create a class called <em>ModBlocks</em>. Here we will instantiate all of our blocks.  </li>
+</ol>
+<hr>
+<p>If you have been following the other tutorials your package structure should look a little like this:<br><img src="%5Bhttp://suppergerrie2.com/wp-content/uploads/2017/07/eclipseFolderStructureBlock.png%5D(http://suppergerrie2.com/wp-content/uploads/2017/07/eclipseFolderStructureBlock.png)" alt=""><br>Open the <em>BlockBasic</em> class and make it extend <em>Block</em>(Make sure you import <em>“net.minecraft.block.Block”</em>). It will now give an error because it needs a constructor. Add a constructor with as arguments a String, for the name, and a <em>Material</em> (Make sure you call <em>super(material)</em> in the constructor). Then just as in the <em>ItemBasic</em> class, call the methods <em>setUnlocalizedName</em> and <em>setRegistryName</em>.</p>
+<p><sub><a href="[https://gist.github.com/suppergerrie2/df706704a03b44ea2995a8eb3ad4f4a0#file-blockbasic-java](https://gist.github.com/suppergerrie2/df706704a03b44ea2995a8eb3ad4f4a0#file-blockbasic-java)"><a href="http://BlockBasic.java" target="_blank" rel="noopener">BlockBasic.java</a></a></sub>  </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BlockBasic</span> <span class="keyword">extends</span> <span class="title">Block</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">BlockBasic</span><span class="params">(String name, Material material)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="keyword">super</span>(material);</span><br><span class="line"></span><br><span class="line">setUnlocalizedName(name);</span><br><span class="line"></span><br><span class="line">setRegistryName(name);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Now open the <em>ModBlocks</em> class. This class is almost the same as the <em>ModItems</em> class, except it will register <em>a</em> <em>Block</em> and an <em>ItemBlock</em>. When you register a <em>Block</em> you just register the placed version of a <em>Block</em>, if you want an <em>Item</em> for the block you have to also register an <em>ItemBlock</em>. Some blocks don’t have an <em>Item</em> version (like the end portal frame), but most blocks have (like the dirt block).<br>In the <em>ModBlocks</em> class add a static <em>Block</em> variable, I will call it <em>tutorialBlock</em>. Now we need to add 5 public static void methods.</p>
+<ol>
+<li>The first method that will be called is <em>init</em> this will initialize our block variable, it doesn’t take any arguments.  </li>
+<li>Then we add <em>registerBlocks</em>, this needs an argument of type <em>RegistryEvent.Register<Block></em>, it also needs an <em>@SubscribeEvent</em> annotation. This method will be called when forge registers all of the blocks.  </li>
+<li>The third method will be <em>registerItemBlocks</em>, this also needs an argument but now of type <em>(RegistryEvent.Register<Item></em>. And it also needs an <em>@SubscribeEvent</em>. Here we will register our <em>ItemBlocks</em>.  </li>
+<li>Just like in the <em>ModItems</em> class we need to register our <em>ItemBlock</em> models. So add a method <em>registerRenders</em>, this needs an argument of type <em>ModelRegistryEvent</em> and also an <em>@SubscribeEvent</em>.  </li>
+<li>The last method will be <em>registerRender</em> this is exactly the same as in the <em>ModItems</em> class, it needs an _Item_as argument.</li>
+</ol>
+<p>We also have to add <a href="mailto:_@Mod.EventBusSubscriber">_@Mod.EventBusSubscriber</a>(modid=Reference.MODID)_ above the class declaration.</p>
+<p>The class should now look a little like this:</p>
+<p><sub><a href="[https://gist.github.com/suppergerrie2/b82ec8bb88b99d05908e5788dec9ab97#file-modblocks-java](https://gist.github.com/suppergerrie2/b82ec8bb88b99d05908e5788dec9ab97#file-modblocks-java)"><a href="http://ModBlocks.java" target="_blank" rel="noopener">ModBlocks.java</a></a></sub>  </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Mod</span>.EventBusSubscriber(modid=Reference.MODID)</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ModBlocks</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="keyword">static</span> Block tutorialBlock;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@SubscribeEvent</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">registerBlocks</span><span class="params">(RegistryEvent.Register&lt;Block&gt; event)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@SubscribeEvent</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">registerItemBlocks</span><span class="params">(RegistryEvent.Register&lt;Item&gt; event)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@SubscribeEvent</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">registerRenders</span><span class="params">(ModelRegistryEvent event)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">registerRender</span><span class="params">(Item item)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>In the <em>init</em> function initialize the <em>tutorialBlock</em> variable. I will name it <em>“tutorial_block”</em> and for the <em>material</em> I will pass it <em>Material.ROCK</em> (You can see all of the materials in <em>net.minecraft.block.material</em>).</p>
+<p><sub><a href="[https://gist.github.com/suppergerrie2/dc2a279fdc22519fcbf48e7f35d459ac#file-modblocks-java](https://gist.github.com/suppergerrie2/dc2a279fdc22519fcbf48e7f35d459ac#file-modblocks-java)"><a href="http://ModBlocks.java" target="_blank" rel="noopener">ModBlocks.java</a></a></sub>  </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">tutorialBlock = <span class="keyword">new</span> BlockBasic(<span class="string">"tutorial_block"</span>, Material.ROCK);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>In the <em>registerBlocks</em> function get the <em>Registry</em> by calling <em>getRegistry</em> on the event and call <em>registerAll</em> on the registry.</p>
+<p><sub><a href="[https://gist.github.com/suppergerrie2/54554e63ee95a9c3a464ac5c73127751#file-modblocks-java](https://gist.github.com/suppergerrie2/54554e63ee95a9c3a464ac5c73127751#file-modblocks-java)"><a href="http://ModBlocks.java" target="_blank" rel="noopener">ModBlocks.java</a></a></sub>  </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@SubscribeEvent</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">registerBlocks</span><span class="params">(RegistryEvent.Register&lt;Block&gt; event)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">event.getRegistry().registerAll(tutorialBlock);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>The <em>registerItemBlocks</em> function is almost the same, except you don’t pass it the <em>tutorialBlock</em> but you instantiate a new <em>ItemBlock</em> and pass it the <em>tutorialBlock</em>. You also have to call <em>setRegistryName_on the _ItemBlock</em>.</p>
+<p><sub><a href="[https://gist.github.com/suppergerrie2/66305cb613713ad5081467d2b98e571e#file-modblocks-java](https://gist.github.com/suppergerrie2/66305cb613713ad5081467d2b98e571e#file-modblocks-java)"><a href="http://ModBlocks.java" target="_blank" rel="noopener">ModBlocks.java</a></a></sub>  </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@SubscribeEvent</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">registerItemBlocks</span><span class="params">(RegistryEvent.Register&lt;Item&gt; event)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">event.getRegistry().registerAll(<span class="keyword">new</span> ItemBlock(tutorialBlock).setRegistryName(tutorialBlock.getRegistryName()));</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>In the <em>registerRenders</em> function call <em>registerRender</em> and pass it the <em>ItemBlock</em>, you can get the <em>ItemBlock</em> by calling the static method <em>Item.getItemFromBlock</em> and passing it the <em>tutorialBlock</em>.</p>
+<p><sub><a href="[https://gist.github.com/suppergerrie2/984168c60c4a70b3e35d1c829dfb4d10#file-modblocks-java](https://gist.github.com/suppergerrie2/984168c60c4a70b3e35d1c829dfb4d10#file-modblocks-java)"><a href="http://ModBlocks.java" target="_blank" rel="noopener">ModBlocks.java</a></a></sub>  </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@SubscribeEvent</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">registerRenders</span><span class="params">(ModelRegistryEvent event)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">registerRender(Item.getItemFromBlock(tutorialBlock));</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>And the <em>registerRender</em> function is the same as in the <em>ModItems</em> class.</p>
+<p><sub><a href="[https://gist.github.com/suppergerrie2/f3a338bc7011cd7556fb69a835d3930a#file-modblocks-java](https://gist.github.com/suppergerrie2/f3a338bc7011cd7556fb69a835d3930a#file-modblocks-java)"><a href="http://ModBlocks.java" target="_blank" rel="noopener">ModBlocks.java</a></a></sub>  </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">registerRender</span><span class="params">(Item item)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">ModelLoader.setCustomModelResourceLocation(item, <span class="number">0</span>, <span class="keyword">new</span> ModelResourceLocation( item.getRegistryName(), <span class="string">"inventory"</span>));</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Now we just have to call <em>ModBlocks.init()</em> in the <em><strong>main</strong></em> mod class’ preI_nit_ method.</p>
+<p>We now have a working block, you can run the game and use the command <em>“/give @p <strong>modid</strong>__:itemname”</em> to get the item or place the block by using <em>“/setblock ~ ~ ~ <strong>modid</strong>:blockname”</em>. But it looks a little strange, that is because we haven’t added the models and textures yet, so lets do that now.<br><img src="%5Bhttp://suppergerrie2.com/wp-content/uploads/2017/08/2017-07-20_11.46.05.png%5D(http://suppergerrie2.com/wp-content/uploads/2017/08/2017-07-20_11.46.05.png)" alt=""><br>In the <em>assets.<strong>modid</strong>.models</em> package create a new package named <em>block</em>. In this package add a new text file, give the text file the following content you can name it whatever you want but it <strong>has</strong> <strong>to be</strong> lowercase:</p>
+<p><sub><a href="[https://gist.github.com/suppergerrie2/ec9c5e76810c95ece859a97f4ade0e10#file-blockname-json](https://gist.github.com/suppergerrie2/ec9c5e76810c95ece859a97f4ade0e10#file-blockname-json)">BLOCKNAME.json</a></sub>  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">&quot;parent&quot;: &quot;block&#x2F;cube_all&quot;,</span><br><span class="line"></span><br><span class="line">&quot;textures&quot;: &#123;</span><br><span class="line"></span><br><span class="line">&quot;all&quot;: &quot;MODID:blocks&#x2F;TEXTURENAME&quot;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Replace the words in caps with your values.<br>In the <em>assets.<strong>modid</strong></em> package create a new package called <em>blockstates</em>. In this package create a text file and give it the following content, again save it as <em><strong>blockname</strong>.json:</em></p>
+<p><sub><a href="[https://gist.github.com/suppergerrie2/cc32e2167bedeac49e800e506f5834f8#file-blockname-json](https://gist.github.com/suppergerrie2/cc32e2167bedeac49e800e506f5834f8#file-blockname-json)">BLOCKNAME.json</a></sub>  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">&quot;variants&quot;: &#123;</span><br><span class="line"></span><br><span class="line">&quot;normal&quot;: [</span><br><span class="line"></span><br><span class="line">&#123; &quot;model&quot;: &quot;MODID:MODELNAME&quot; &#125;</span><br><span class="line"></span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Replace the words in caps with your values.<br>Now in the <em>assets.<strong>modid</strong>.textures</em> package create a new package called <em>blocks</em>, here you can put your texture, it has to be a power of 2 (16×16,32×32, etc.) and a .png. I will use this texture: <a href="[http://suppergerrie2.com/wp-content/uploads/2017/07/tutorialblock.png](http://suppergerrie2.com/wp-content/uploads/2017/07/tutorialblock.png)"><img src="%5Bhttp://suppergerrie2.com/wp-content/uploads/2017/07/tutorialblock.png%5D(http://suppergerrie2.com/wp-content/uploads/2017/07/tutorialblock.png)" alt=""></a><br>This is enough for the block itself to get a texture, but the <em>ItemBlock</em> doesn’t have a texture yet. We will fix that now:</p>
+<p>In the <em>assets.<strong>modid</strong>.models.item</em> folder create a new text file. Give it the following content and name it <strong><em>blockname</em></strong><em>.json</em>:</p>
+<p><sub><a href="[https://gist.github.com/suppergerrie2/a858001d72f9424319a420fc4890e474#file-blockname-json](https://gist.github.com/suppergerrie2/a858001d72f9424319a420fc4890e474#file-blockname-json)">BLOCKNAME.json</a></sub>  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">&quot;parent&quot;: &quot;MODID:block&#x2F;MODELNAME&quot;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Now we just have to fix the name. Go to your lang file (<em>assets.<strong>modid</strong>.lang</em>) and add the following line:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[tile.BLOCKNAME.name](http:&#x2F;&#x2F;tile.BLOCKNAME.name)&#x3D;YOUR NAME</span><br></pre></td></tr></table></figure>
+
+<p>You should now have a working AND good looking block!<br><a href="[http://suppergerrie2.com/wp-content/uploads/2017/08/2017-07-20_11.46.44.png](http://suppergerrie2.com/wp-content/uploads/2017/08/2017-07-20_11.46.44.png)"><img src="%5Bhttp://suppergerrie2.com/wp-content/uploads/2017/08/2017-07-20_11.46.44.png%5D(http://suppergerrie2.com/wp-content/uploads/2017/08/2017-07-20_11.46.44.png)" alt=""></a></p>
+<p>To change some of the behaviour of the block you can do the same as with the item, call a set method while instantiating the block. To change the time it takes to mine call <em>setHardness</em> and pass it a float, I will pass it <em>1.5f</em> just like the vanilla stone block. The higher the value the longer it takes to mine.<br>It will probably also be useful to put it in a creativetab, this is done exactly the same as with <em>Items</em>, just call the method <em>setCreativeTab</em> and pass it the tab you want. I will put it in <em>CreativeTabs.BUILDING_BLOCKS</em>.<br>I will also make it give of light, this is done by calling the method <em>setLightLevel</em>. This method asks for a <em>float</em> this has to be a value from 0 to 1. If you want it to give of a light level of 15 (Highest value) enter <em>15f/15f</em> or <em>1.0f</em>. For a value of <em>i</em> <em>(Where 0≤i≤15)</em> enter <em>i/15f</em>.</p>
+<p>This is the final line:  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tutorialBlock &#x3D;new BlockBasic(&quot;tutorial_block&quot;, Material.ROCK).setHardness(1.5f).setCreativeTab(CreativeTabs.BUILDING_BLOCKS).setLightLevel(1.0f);</span><br></pre></td></tr></table></figure>
+
+<p>I also want to make it only mineable by a iron pickaxe or higher. Because I used <em>Material.ROCK</em> it is already only mineable by pickaxes, but to have it only mineable by iron or hight call <em>setHarvestLevel</em>. This method asks for 2 variables, 1 String toolClass and one int Level:</p>
+<ul>
+<li>toolClass can be:  </li>
+<li>“pickaxe”  </li>
+<li>“shovel”  </li>
+<li>“axe”  </li>
+<li>level can be:  </li>
+<li>0 for wood or gold  </li>
+<li>1 for stone  </li>
+<li>2 for iron  </li>
+<li>3 for diamond</li>
+</ul>
+<p>This message <strong>can’t</strong> be used in chaining because it doesn’t return the <em>Block</em> instance we were working on. So you need to call this method separately.<br>Here are all of the classes we created this tutorial:</p>
+<p><sub><a href="[https://gist.github.com/suppergerrie2/e8f6a8e3dcfb68648e2398a5e3537f5f#file-modblocks-java](https://gist.github.com/suppergerrie2/e8f6a8e3dcfb68648e2398a5e3537f5f#file-modblocks-java)"><a href="http://ModBlocks.java" target="_blank" rel="noopener">ModBlocks.java</a></a></sub>  </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Mod</span>.EventBusSubscriber(modid=Reference.MODID)</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ModBlocks</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="keyword">static</span> Block tutorialBlock;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">tutorialBlock = <span class="keyword">new</span> BlockBasic(<span class="string">"tutorial_block"</span>, Material.ROCK).setHardness(<span class="number">1.5f</span>).setCreativeTab(CreativeTabs.BUILDING_BLOCKS).setLightLevel(<span class="number">1.0f</span>);</span><br><span class="line"></span><br><span class="line">tutorialBlock.setHarvestLevel(<span class="string">"pickaxe"</span>, <span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@SubscribeEvent</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">registerBlocks</span><span class="params">(RegistryEvent.Register&lt;Block&gt; event)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">event.getRegistry().registerAll(tutorialBlock);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@SubscribeEvent</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">registerItemBlocks</span><span class="params">(RegistryEvent.Register&lt;Item&gt; event)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">event.getRegistry().registerAll(<span class="keyword">new</span> ItemBlock(tutorialBlock).setRegistryName(tutorialBlock.getRegistryName()));</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@SubscribeEvent</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">registerRenders</span><span class="params">(ModelRegistryEvent event)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">registerRender(Item.getItemFromBlock(tutorialBlock));</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">registerRender</span><span class="params">(Item item)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">ModelLoader.setCustomModelResourceLocation(item, <span class="number">0</span>, <span class="keyword">new</span> ModelResourceLocation( item.getRegistryName(), <span class="string">"inventory"</span>));</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;  </span><br><span class="line">```  </span><br><span class="line">.</span><br><span class="line"></span><br><span class="line">&lt;sub&gt;[[BlockBasic.java](http:<span class="comment">//BlockBasic.java)]([https://gist.github.com/suppergerrie2/42b6643c9c09da7f69270b19f9e61b94#file-blockbasic-java](https://gist.github.com/suppergerrie2/42b6643c9c09da7f69270b19f9e61b94#file-blockbasic-java))&lt;/sub&gt;  </span></span><br><span class="line">```java  </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BlockBasic</span> <span class="keyword">extends</span> <span class="title">Block</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">BlockBasic</span><span class="params">(String name, Material material)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="keyword">super</span>(material);</span><br><span class="line"></span><br><span class="line">setUnlocalizedName(name);</span><br><span class="line"></span><br><span class="line">setRegistryName(name);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>This way you can change some basic things of the block, you can click <a href="[https://github.com/suppergerrie2/ForgeTutorial/tree/master/per%20part/part%204](https://github.com/suppergerrie2/ForgeTutorial/tree/master/per%20part/part%204)">here</a> to see all of the code from this part. In some of the next tutorials we will make some more advanced blocks.<br>But for now that was it.</p>
+
+			</div>
+			
+			</div>
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+	</div>
+	
+ </body>
+</article>
+    </main>
+	</div>
+	
+	<div class="free-area">
+	<div class="blog-footer">
+		<p>by <a href="">蓝兔</a> </p>
+	</div>
+	</div>
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

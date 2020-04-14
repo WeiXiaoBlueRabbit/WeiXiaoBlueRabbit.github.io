@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/my-bootstrap-nav.css" rel="stylesheet">
+	<!--自制左侧菜单栏源文件引入-->
+	<link rel="stylesheet" type="text/css" href="css/nav.css">
+	<link rel="stylesheet" type="text/css" href="fonts/iconfont.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/nav.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="css/starter-template.css" rel="stylesheet">
+	<!--
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    -->
+	
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <meta name="generator" content="Hexo 4.2.0"></head>
+  </html>
+  
+  <body>
+  
+    <main class="main">
+      <article class="post">
+	
+  <body>
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+		  <!--
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+		  -->
+          <div class="navbar-brand" id="normal"><span class="pos"><img src="images/mini.png"></span></div>>
+		  
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">待加入</a></li>
+            <li><a href="#about">待加入</a></li>
+            <li><a href="#contact">待加入</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div><!--navbar-->
+
+	<div class="hole-div">   <!--除导航栏外，把整个内容包裹在里面-->
+	<div class="my-nav">
+
+	  <ul>
+		<li class="nav-item">
+		  <a href="#"><span class="my-icon icon_1"></span><span class="tile-text">网站配置</span><i class="my-icon nav-more"></i></a>
+		  <ul>
+			<li><a href="#"><span>网站设置</span></a></li>
+			<li><a href="#"><span>友情链接</span></a></li>
+			<li><a href="#"><span>分类管理</span></a></li>
+			<li><a href="#"><span>系统日志</span></a></li>
+		  </ul>
+		</li>
+		<li class="nav-item">
+		  <a href="#"><span class="my-icon icon_2"></span><span class="tile-text">文章</span><i class="my-icon nav-more"></i></a>
+		  <ul>
+			<li><a href="#"><span>站内新闻</span></a></li>
+			<li><a href="#"><span>站内公告</span></a></li>
+			<li><a href="#"><span>登录日志</span></a></li>
+		  </ul>
+		</li>
+		<!--
+		<li class="nav-item">
+		  <a href="#"><span class="my-icon icon_3"></span><span class="tile-text">订单管理</span><i class="my-icon nav-more"></i></a>
+		  <ul>
+			<li><a href="#"><span>订单列表</span></a></li>
+			<li><a href="#"><span>打个酱油</span></a></li>
+			<li><a href="#"><span>也打酱油</span></a></li>
+		  </ul>
+		</li>
+		-->
+	  </ul>
+	</div>
+	
+	<div class="free-area">, <!--点击此区域可收起菜单栏-->
+    <div class="container">
+
+      <div class="blog-header">
+			<h1 class="blog-title">Recipes</h1>
+			<p class="lead blog-description">The official example template of creating a blog with Bootstrap.</p>
+			<span class="post-time">2020-04-13</span>
+      </div>
+
+      <div class="row">
+
+        <div class="col-sm-11 blog-main">
+
+            <div class="post-content">
+				<h3 id="Minecraft-1-12-modding-with-forge-–-6-–-custom-recipes"><a href="#Minecraft-1-12-modding-with-forge-–-6-–-custom-recipes" class="headerlink" title="Minecraft 1.12 modding with forge – 6 – custom recipes"></a>Minecraft 1.12 modding with forge – 6 – custom recipes</h3><p>Hello everyone, in this part we will be adding some custom recipes, I will show how to add a smelting recipe, a shapeless recipe and a shaped recipe.</p>
+<hr>
+<p>For the people who haven’t followed this tutorial, I have 2 custom items and 2 custom blocks. If you don’t know how to add blocks click <a href="http://suppergerrie2.itsab.nl/minecraft-1-12-modding-with-forge-4-custom-block" target="_blank" rel="noopener">here</a>, for items click <a href="http://suppergerrie2.com/minecraft-1-12-modding-with-forge-3-custom-item/" target="_blank" rel="noopener">here</a>. For the people who followed the tutorial, I renamed the <em>tutorialItem</em> to <em>tutorialIngot</em> to be more consistent with the texture. Well lets get started!</p>
+<hr>
+<p>In the <em>init</em>  package create a new class and call it <em>ModRecipes</em>. Add a public static method, this method will register all of your recipes. I called it init to be consistent with the other classes.</p>
+<p>I am going to add a smelting recipe to smelt the  <em>tutorialDust</em>  into the <em>tutorialIngot</em>. In this method call the method <em>addSmelting</em>  on the <em>GameRegistry</em>  object. This method needs an input, an output, and an amount of xp it will give. The input can be a <em>Block</em>, an <em>Item</em>  or an <em>ItemStack</em>. The output has to be an <em>ItemStack</em>  and the amount of xp has to be an <em>float</em>.</p>
+<p>As input I will pass it <em>ModItems.tutorialDust</em>. The output has to be an <em>ItemStack</em>, an <em>ItemStack</em>  is like an stack of <em>items</em>  in game. You have to instantiate it with the <em>item_you want the stack to be and the amount of _items</em>  in the stack. I will make it an <em>ItemStack</em>  of 1 <em>ModItems.tutorialIngot</em>  item. Diamond has <em>1.0</em>  for the xp amount, I will use <em>1.5</em>. I will make another smelting recipe, this one takes the <em>ModBlocks.oreBlock</em>  and turns into 2 <em>ModItems.tutorialIngot_s, it wil only give _0.2</em>  xp.</p>
+<p><sub><a href="https://gist.github.com/suppergerrie2/e3a606639c9a5c08444a4c01148ddd6e#file-modrecipes-java" target="_blank" rel="noopener">ModRecipes.java</a></sub></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ModRecipes</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		GameRegistry.addSmelting(ModItems.tutorialDust, <span class="keyword">new</span> ItemStack(ModItems.tutorialIngot, <span class="number">1</span>), <span class="number">1.5f</span>);</span><br><span class="line"></span><br><span class="line">		GameRegistry.addSmelting(ModBlocks.tutorialOre, <span class="keyword">new</span> ItemStack(ModItems.tutorialDust, <span class="number">2</span>), <span class="number">0.2f</span>);</span><br><span class="line"></span><br><span class="line">	&#125;	</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>If you want to know all of the xp values for vanilla, you can see the vanilla smelting recipes in <em>net.minecraft.item.crafting.FurnaceRecipes</em>.</p>
+<p>Now in the <strong><em>main</em></strong>  class’  <em>i__nit</em>  method call the <em>ModRecipes.init();</em></p>
+<p>For crafting recipes you don’t have to add any code. In your <em>assets</em>  package create a new package called <em>recipes</em>  in this folder you can put .json files which will be loaded by the game. Here is a shaped recipe example:</p>
+<p><sub><a href="https://gist.github.com/suppergerrie2/233cfd4b25ed476707f7073d35868d64#file-shapedrecipeexample-json" target="_blank" rel="noopener">shapedrecipeexample.json</a></sub></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">&#123; </span><br><span class="line"></span><br><span class="line">  &quot;type&quot;: &quot;minecraft:crafting_shaped&quot;,</span><br><span class="line"></span><br><span class="line">  &quot;pattern&quot;: [</span><br><span class="line"></span><br><span class="line">    &quot;AAA&quot;,</span><br><span class="line"></span><br><span class="line">    &quot;AAA&quot;,</span><br><span class="line"></span><br><span class="line">    &quot;AAA&quot;  ],</span><br><span class="line"></span><br><span class="line">  &quot;key&quot;: &#123;</span><br><span class="line"></span><br><span class="line">    &quot;A&quot;: [</span><br><span class="line"></span><br><span class="line">      &#123;</span><br><span class="line"></span><br><span class="line">        &quot;item&quot;: &quot;stm:tutorialingot&quot;,</span><br><span class="line"></span><br><span class="line">        &quot;data&quot;: 0</span><br><span class="line"></span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">    ]</span><br><span class="line"></span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  &quot;result&quot;: &#123;</span><br><span class="line"></span><br><span class="line">    &quot;item&quot;: &quot;stm:tutorialblock&quot;,</span><br><span class="line"></span><br><span class="line">    &quot;data&quot;: 0</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>This recipe needs 9 _tutorialIngot_s in a 3×3 grid, this recipe is just like the iron block recipe.</p>
+<p><a href="http://suppergerrie2.com/wp-content/uploads/2017/08/2017-07-22_14.52.46.png" target="_blank" rel="noopener"><img src="http://suppergerrie2.com/wp-content/uploads/2017/08/2017-07-22_14.52.46.png" alt=""></a></p>
+<p>And here a shapeless one:</p>
+<p><sub><a href="https://gist.github.com/suppergerrie2/991f9f1f99e4fe5547c945eb2309bf5b#file-shapelessrecipe-json" target="_blank" rel="noopener">shapelessrecipe.json</a></sub></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">&#123; </span><br><span class="line"></span><br><span class="line">  &quot;type&quot;: &quot;minecraft:crafting_shapeless&quot;,</span><br><span class="line"></span><br><span class="line">  &quot;ingredients&quot;: [</span><br><span class="line"></span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">	  &quot;item&quot;: &quot;minecraft:stone&quot;,</span><br><span class="line"></span><br><span class="line">	  &quot;data&quot;: 0</span><br><span class="line"></span><br><span class="line">	&#125;,</span><br><span class="line"></span><br><span class="line">	&#123;</span><br><span class="line"></span><br><span class="line">	  &quot;item&quot;: &quot;stm:tutorialdust&quot;,</span><br><span class="line"></span><br><span class="line">	  &quot;data&quot;: 0</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">  ],</span><br><span class="line"></span><br><span class="line">  &quot;result&quot;: &#123;</span><br><span class="line"></span><br><span class="line">    &quot;item&quot;: &quot;minecraft:purpur_block&quot;,</span><br><span class="line"></span><br><span class="line">    &quot;data&quot;: 0</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>This recipe needs a vanilla stone block and the custom <em>tutorialIngot</em> (My <em>modid</em> is <em>“stm”</em>). Putting this in a crafting table, or your 2×2 crafting grid will result in 2 purpur block.<br><a href="http://suppergerrie2.com/wp-content/uploads/2017/08/2017-07-22_14.52.23.png" target="_blank" rel="noopener"><img src="http://suppergerrie2.com/wp-content/uploads/2017/08/2017-07-22_14.52.23.png" alt=""></a><br>A shaped recipe has a pattern, to fill the 3×3 of the crafting table you can do:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;AAA&quot;</span><br><span class="line">&quot;AAA&quot;</span><br><span class="line">&quot;AAA&quot;</span><br></pre></td></tr></table></figure>
+
+<p>You can enter any symbol you want instead of “A” but you have to define the <em>key</em>  and the value. That is done in the <em>json</em>  under <em>keys</em>. You can also have different keys:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;AAA&quot;</span><br><span class="line">&quot; B &quot;</span><br><span class="line">&quot; B &quot;</span><br></pre></td></tr></table></figure>
+
+<p>This would be a pickaxe shaped recipe. If you have a place where you don’t have a recipe you should put space (” “) there. For recipes that don’t fill the 3×3 you should leave out the spaces at the end, for example:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;AA&quot;</span><br><span class="line">&quot;B &quot;</span><br><span class="line">&quot;B &quot;</span><br></pre></td></tr></table></figure>
+
+<p>This would be a hoe shaped recipe, this recipe is only 2 wide so we can remove the space at the end (Make sure every line is the <strong>same</strong>  length, as you can see they are all 2 long).<br>If your recipe is your recipe is only 2 high you can remove the bottom line.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&quot;AB&quot;</span><br><span class="line">&quot;BA&quot;</span><br></pre></td></tr></table></figure>
+
+<p>This recipe would also be possible in your 2×2 crafting grid.</p>
+<p>For shapeless recipes you don’t need a pattern, but you need  <em>ingredients</em>. To complete the recipe you need all of the <em>ingredients</em>  to be in the crafting grid, but the order doesn’t matter., like dyeing wool.<br>There is a  <a href="https://crafting.thedestruc7i0n.ca/" target="_blank" rel="noopener">recipe generator</a>, it only works with vanilla blocks but you can renamen the items in the json file you get so it can be useful.<br>For more information about the format you can check  <a href="http://www.minecraftforum.net/forums/minecraft-discussion/redstone-discussion-and/commands-command-blocks-and/2810250-1-12-custom-recipes" target="_blank" rel="noopener">this</a>  post.</p>
+<p>That was all for this part! I hope you learned something, as always if you have any question don’t hesitate to ask in the comments. Saw any errors? Please tell me!<br>Till next time!</p>
+
+			</div>
+			
+			</div>
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+	</div>
+	
+ </body>
+</article>
+    </main>
+	</div>
+	
+	<div class="free-area">
+	<div class="blog-footer">
+		<p>by <a href="">蓝兔</a> </p>
+	</div>
+	</div>
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
