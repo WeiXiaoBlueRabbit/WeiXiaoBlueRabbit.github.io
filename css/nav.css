@@ -1,9 +1,9 @@
 @charset "utf-8";
 /* 以下实际使用若已初始化可删除 .nav height父级需逐级设置为100%*/
 body,html{height: 100%;}
-body,ul{margin:0;padding:0}
-li{list-style:none} 
-a{text-decoration:none;}
+.my-nav ul{margin:0;padding:0}
+.my-nav li{list-style:none} 
+.my-nav a{text-decoration:none;}
 .my-nav{position:fixed;z-index:3;}/*将左侧菜单栏的优先级设置为3，以至于能显示在其他div之上*/
 /* 结束 */
 
