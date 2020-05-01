@@ -50,9 +50,11 @@ body,html{height: 100%;}
 @media screen and (max-width: 767px){
 .nav-normal.my-nav{height:auto;}
 .nav-normal.my-nav a span{display:inline;}
+.navbar {display:none}
 }
 @media screen and (min-width: 768px){
 .nav-normal.my-nav{width:220px;}
+.container-1 {display:none}
 }
 .nav-normal.my-nav .nav-more{margin-right: 20px;}
 .nav-normal.my-nav .nav-item a span{display:inline}

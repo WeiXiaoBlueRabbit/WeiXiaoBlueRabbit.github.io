@@ -24,6 +24,10 @@ $(function(){
     });
 	
 	//点击空白处即可收回菜单栏
+	$('#content').on('click',function(){
+		 $('.my-nav').removeClass('nav-normal');
+		 });
+	
 	$('.free-area').on('click',function(){
 		 $('.my-nav').removeClass('nav-normal');
 		 });
